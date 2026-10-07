@@ -13,9 +13,16 @@ Projekt obejmuje:
 - Konta użytkowników — komentowanie i ocenianie rozwiązań
 - Moderację treści dodawanych przez użytkowników
 
-<!-- Po skonfigurowaniu pipeline'u CI/CD: dodać tu badge statusu -->
+## Technologie
+- **Backend:** ASP.NET Core Web API (C#) + Entity Framework Core
+- **Frontend:** React + TypeScript (Vite)
+- **Baza danych:** SQLite
+- **Integracje zewnętrzne:** Model LLM (kategoryzacja zadań), Wolfram Alpha API (kalkulator)
 
-## Zespół
+<!-- Po skonfigurowaniu pipeline'u CI/CD: dodać tu badge statusu, tak jak w OOBT_Pandas -->
+
+## Zespół i podział ról
+<!-- TBD — podział ról do ustalenia -->
 - **Adam Lewandowski:**
 - **Jan Rampalski:**
 - **Maciej Radlak:**
@@ -41,13 +48,20 @@ matemin/
 │   │   └── sequence-diagram.png
 │   ├── harmonogram.md
 │   └── wymagania.md
+├── backend/          <!-- ASP.NET Core Web API -->
+├── frontend/         <!-- React + TypeScript (Vite) -->
 └── README.md
 ```
-<!-- Sekcja zostanie rozbudowana o katalogi kodu, testów i pipeline
-     po wyborze stacku technologicznego -->
+<!-- Foldery backend/ i frontend/ zostaną założone przy starcie implementacji -->
 
 ## Uruchomienie projektu
-<!-- TBD — do uzupełnienia po wyborze stacku technologicznego -->
+<!-- Zostanie uzupełnione konkretnymi krokami (dotnet run / npm run dev)
+     po założeniu szkieletu backend/ i frontend/ -->
+**Wymagania:**
+- .NET SDK (backend)
+- Node.js + npm (frontend)
+
+Baza danych: SQLite — plik bazy tworzony lokalnie, bez dodatkowej konfiguracji.
 
 ## Pipeline
 <!-- TBD — do uzupełnienia po skonfigurowaniu CI/CD -->
