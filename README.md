@@ -22,12 +22,11 @@ Projekt obejmuje:
 <!-- Po skonfigurowaniu pipeline'u CI/CD: dodać tu badge statusu, tak jak w OOBT_Pandas -->
 
 ## Zespół i podział ról
-<!-- TBD — podział ról do ustalenia -->
-- **Adam Lewandowski:**
-- **Jan Rampalski:**
-- **Maciej Radlak:**
-- **Magda Kaczorowska:**
-- **Adam Dąbrowski:**
+- **Magda Kaczorowska:** Backend — API i baza danych (ASP.NET Core Web API, model EF Core)
+- **Jan Rampalski:** Frontend (React + TypeScript)
+- **Adam Dąbrowski:** Backend — integracje zewnętrzne (Model LLM, Wolfram Alpha API) + repozytorium i CI/CD
+- **Adam Lewandowski:** Backend — logika domenowa (moderacja, statusy zadań, zarządzanie kontami)
+- **Maciej Radlak:** Testy i dokumentacja
 
 ## Dokumentacja projektu
 Szczegółowe informacje znajdują się w folderze `docs/`:
