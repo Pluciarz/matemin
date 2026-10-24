@@ -14,7 +14,7 @@ Projekt obejmuje:
 - Moderację treści dodawanych przez użytkowników
 
 ## Technologie
-- **Backend:** ASP.NET Core Web API (C#) + Entity Framework Core
+- **Backend:** ASP.NET Core Web API (.NET 8, C#) + Entity Framework Core
 - **Frontend:** React + TypeScript (Vite)
 - **Baza danych:** SQLite
 - **Integracje zewnętrzne:** Model LLM (kategoryzacja zadań), Wolfram Alpha API (kalkulator)
@@ -37,6 +37,12 @@ Szczegółowe informacje znajdują się w folderze `docs/`:
 ## Struktura repozytorium
 ```
 matemin/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug.md
+│   │   ├── config.yml
+│   │   └── nowa-funkcjonalnosc.md
+│   └── pull_request_template.md
 ├── docs/
 │   ├── diagrams/
 │   │   ├── use-case-diagram.drawio
@@ -47,20 +53,36 @@ matemin/
 │   │   └── sequence-diagram.png
 │   ├── harmonogram.md
 │   └── wymagania.md
-├── backend/          <!-- ASP.NET Core Web API -->
-├── frontend/         <!-- React + TypeScript (Vite) -->
+├── backend/          # ASP.NET Core Web API (.NET 8 + EF Core + SQLite)
+├── frontend/         # React + TypeScript (Vite)
+├── .gitignore
 └── README.md
 ```
-<!-- Foldery backend/ i frontend/ zostaną założone przy starcie implementacji -->
 
 ## Uruchomienie projektu
-<!-- Zostanie uzupełnione konkretnymi krokami (dotnet run / npm run dev)
-     po założeniu szkieletu backend/ i frontend/ -->
-**Wymagania:**
-- .NET SDK (backend)
-- Node.js + npm (frontend)
 
-Baza danych: SQLite — plik bazy tworzony lokalnie, bez dodatkowej konfiguracji.
+**Wymagania:**
+- .NET 8 SDK (backend)
+- Node.js 18+ oraz npm (frontend)
+
+### 1. Backend (ASP.NET Core Web API)
+```bash
+cd backend
+dotnet restore
+dotnet ef migrations add Init
+dotnet ef database update
+dotnet run
+```
+Po uruchomieniu API oraz dokumentacja Swagger UI będą dostępne pod adresem: `http://localhost:5000/swagger`.
+Baza danych SQLite (`matemin.db`) zostanie utworzona automatycznie w katalogu `backend/`.
+
+### 2. Frontend (React + Vite)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Aplikacja frontendowa będzie dostępna pod adresem: `http://localhost:5173`.
 
 ## Pipeline
 <!-- TBD — do uzupełnienia po skonfigurowaniu CI/CD -->
