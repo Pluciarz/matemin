@@ -1,5 +1,7 @@
 # Matemin
 
+[![CI Pipeline](https://github.com/Pluciarz/matemin/actions/workflows/ci.yml/badge.svg)](https://github.com/Pluciarz/matemin/actions/workflows/ci.yml)
+
 ## Cel projektu
 Celem projektu jest zaprojektowanie i implementacja aplikacji wspierającej
 uczniów w przygotowaniach do matury z matematyki — bazy zadań maturalnych
@@ -18,8 +20,6 @@ Projekt obejmuje:
 - **Frontend:** React + TypeScript (Vite)
 - **Baza danych:** SQLite
 - **Integracje zewnętrzne:** Model LLM (kategoryzacja zadań), Wolfram Alpha API (kalkulator)
-
-<!-- Po skonfigurowaniu pipeline'u CI/CD: dodać tu badge statusu, tak jak w OOBT_Pandas -->
 
 ## Zespół i podział ról
 - **Magda Kaczorowska:** Backend — API i baza danych (ASP.NET Core Web API, model EF Core)
@@ -42,6 +42,8 @@ matemin/
 │   │   ├── bug.md
 │   │   ├── config.yml
 │   │   └── nowa-funkcjonalnosc.md
+│   ├── workflows/
+│   │   └── ci.yml
 │   └── pull_request_template.md
 ├── docs/
 │   ├── diagrams/
@@ -85,9 +87,12 @@ npm run dev
 Aplikacja frontendowa będzie dostępna pod adresem: `http://localhost:5173`.
 
 ## Pipeline
-<!-- TBD — do uzupełnienia po skonfigurowaniu CI/CD -->
+Repozytorium wykorzystuje **GitHub Actions** (`.github/workflows/ci.yml`) do automatycznej weryfikacji kodu przy każdym pushu na gałąź `main` oraz w każdym Pull Requeście:
+1. **Backend (.NET 8):** Pobranie zależności (`dotnet restore`) oraz kompilacja projektu API (`dotnet build --configuration Release`).
+2. **Frontend (React + TypeScript):** Czysta instalacja pakietów (`npm ci`), kontrola typów kompilatora TypeScript (`tsc -b`) oraz budowanie paczki produkcyjnej Vite (`npm run build`).
 
 ## Komunikacja
 - **Messenger:** Bieżąca komunikacja zespołu
 - **GitHub Issues:** Zarządzanie zadaniami
+- **GitHub Projects:** Tablica Kanban do śledzenia postępów w sprintach
 - **Pull Requests:** Wprowadzanie zmian z obowiązkowym code review
