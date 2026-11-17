@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "pl-PL"
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  collapse_walkthrough: false
+
+  auto_review:
+    enabled: true
+    drafts: false
+
+  path_filters:
+    - "!backend/Migrations/**"
+    - "!frontend/package-lock.json"
+    - "!docs/diagrams/*.png"
+    - "!docs/diagrams/*.drawio"
+
+  path_instructions:
+    - path: "backend/**/*.cs"
+      instructions: |
+        - Projekt korzysta z ASP.NET Core (.NET 8), Entity Framework Core 8 oraz SQLite w przestrzeni nazw `MatemIn.Backend`.
+        - Sprawdzaj zgodność z modelem domenowym (`Uzytkownik` TPH, `ZalogowanyUczen`, `Moderator`, `Dzial`, `Zadanie`, `Rozwiazanie`, `Komentarz`, `Ocena`, `StatusZadania`).
+        - W zapytaniach odczytujących zwracaj uwagę na użycie `async/await`, projekcji (`Select`) lub `AsNoTracking()`.
+        - Zwracaj uwagę na brak zahardkodowanych kluczy API, haseł i wrażliwych danych oraz na poprawną obsługę kodów HTTP (`NotFound`, `BadRequest`, `Ok`).
+
+    - path: "frontend/src/**"
+      instructions: |
+        - Projekt korzysta z React 18, TypeScript 5 w trybie strict (`noUnusedLocals: true`, `noUnusedParameters: true`) oraz czystego CSS bez zewnętrznych bibliotek UI.
+        - Wykrywaj nieużywane zmienne/parametry/importy, typy `any` oraz błędy dostępności (brakujące `aria-*`, semantyczny HTML).
+
+    - path: "tests/**/*.cs"
+      instructions: |
+        - Testy jednostkowe pisane są w xUnit. Sprawdzaj czytelne nazewnictwo metod testowych, układ Arrange-Act-Assert oraz pokrycie przypadków brzegowych.
+
+    - path: "docs/**/*.md"
+      instructions: |
+        - Sprawdzaj spójność dokumentacji z `docs/wymagania.md` oraz `docs/harmonogram.md`.
