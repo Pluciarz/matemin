@@ -1,18 +1,597 @@
-.app-container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-family: system-ui, -apple-system, sans-serif;
+/* ==========================================================================
+   MatemIn - Style aplikacji (Czysty CSS)
+   ========================================================================== */
+
+:root {
+  --kolor-glowny: #1e3a8a;
+  --kolor-glowny-hover: #1e40af;
+  --kolor-glowny-jasny: #eff6ff;
+  --kolor-akcent: #2563eb;
+  --kolor-akcent-subtelny: #dbeafe;
+  --tekst-glowny: #111827;
+  --tekst-drugorzedny: #4b5563;
+  --tekst-wyciszony: #6b7280;
+  --tlo-strony: #f9fafb;
+  --tlo-karty: #ffffff;
+  --obramowanie: #e5e7eb;
+  --obramowanie-ciemniejsze: #d1d5db;
+  --status-sukces-tlo: #ecfdf5;
+  --status-sukces-tekst: #047857;
+  --status-sukces-obramowanie: #a7f3d0;
+  --promien-sm: 6px;
+  --promien-md: 10px;
+  --promien-lg: 14px;
+  --cien-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --cien-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --cien-hover: 0 8px 16px -2px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --przejscie: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Kontener główny aplikacji */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--tekst-glowny);
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Nagłówek aplikacji
+   ========================================================================== */
 
 .app-header {
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--obramowanie);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
-.app-header h1 {
+.app-header-content h1 {
+  margin: 0 0 0.35rem;
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--kolor-glowny);
+}
+
+.app-header-subtitle {
   margin: 0;
-  font-size: 2rem;
-  color: #1e3a8a;
+  font-size: 0.95rem;
+  color: var(--tekst-drugorzedny);
+}
+
+/* ==========================================================================
+   Pasek nawigacji
+   ========================================================================== */
+
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 0.35rem;
+  background-color: #f3f4f6;
+  border-radius: var(--promien-lg);
+  border: 1px solid var(--obramowanie);
+}
+
+.nav-button {
+  flex: 1 1 auto;
+  min-width: 130px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--tekst-drugorzedny);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--promien-md);
+  cursor: pointer;
+  transition: var(--przejscie);
+  text-align: center;
+}
+
+.nav-button:hover {
+  color: var(--kolor-glowny);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-button-active {
+  color: #ffffff;
+  background-color: var(--kolor-glowny);
+  box-shadow: var(--cien-sm);
+}
+
+.nav-button-active:hover {
+  color: #ffffff;
+  background-color: var(--kolor-glowny-hover);
+}
+
+.nav-button:focus-visible {
+  outline: 2px solid var(--kolor-akcent);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Układ dwukolumnowy Bazy Zadań (Sidebar + Treść główna)
+   ========================================================================== */
+
+.baza-zadan-layout {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+}
+
+/* Sidebar z listą działów */
+.sidebar-dzialy {
+  width: 290px;
+  flex-shrink: 0;
+  background-color: var(--tlo-karty);
+  border: 1px solid var(--obramowanie);
+  border-radius: var(--promien-lg);
+  padding: 1.25rem;
+  box-shadow: var(--cien-sm);
+  position: sticky;
+  top: 1rem;
+}
+
+.sidebar-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--obramowanie);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--kolor-glowny);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dzialy-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dzial-grupa {
+  display: flex;
+  flex-direction: column;
+}
+
+.dzial-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: var(--promien-md);
+  background: transparent;
+  color: var(--tekst-glowny);
+  font-size: 0.925rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--przejscie);
+}
+
+.dzial-btn:hover {
+  background-color: var(--kolor-glowny-jasny);
+  color: var(--kolor-akcent);
+}
+
+.dzial-btn-active {
+  background-color: var(--kolor-glowny-jasny);
+  color: var(--kolor-glowny);
+  border-color: var(--kolor-akcent-subtelny);
+}
+
+.dzial-btn-nazwa {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dzial-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #f3f4f6;
+  color: var(--tekst-wyciszony);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-left: 0.5rem;
+}
+
+.dzial-btn-active .dzial-badge {
+  background-color: var(--kolor-glowny);
+  color: #ffffff;
+}
+
+/* Poddziały */
+.poddzialy-lista {
+  list-style: none;
+  margin: 0.25rem 0 0.5rem 0.85rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid var(--obramowanie);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.poddzial-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: var(--promien-sm);
+  background: transparent;
+  color: var(--tekst-drugorzedny);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--przejscie);
+}
+
+.poddzial-btn:hover {
+  background-color: #f3f4f6;
+  color: var(--tekst-glowny);
+}
+
+.poddzial-btn-active {
+  background-color: #e0e7ff;
+  color: var(--kolor-glowny);
+  font-weight: 600;
+  border-color: #c7d2fe;
+}
+
+.poddzial-btn-nazwa {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.poddzial-badge {
+  font-size: 0.7rem;
+  background-color: #e5e7eb;
+  color: var(--tekst-drugorzedny);
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  margin-left: 0.35rem;
+}
+
+.poddzial-btn-active .poddzial-badge {
+  background-color: #4338ca;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Prawa kolumna: wyszukiwarka + lista zadań
+   ========================================================================== */
+
+.glowna-zawartosc {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Wyszukiwarka */
+.wyszukiwarka-sekcja {
+  background-color: var(--tlo-karty);
+  border: 1px solid var(--obramowanie);
+  border-radius: var(--promien-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--cien-sm);
+}
+
+.input-szukaj-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.szukaj-ikona {
+  position: absolute;
+  left: 0.95rem;
+  font-size: 1rem;
+  pointer-events: none;
+  color: var(--tekst-wyciszony);
+}
+
+.input-szukaj {
+  width: 100%;
+  padding: 0.75rem 2.6rem 0.75rem 2.5rem;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--obramowanie);
+  border-radius: var(--promien-md);
+  background-color: #f9fafb;
+  color: var(--tekst-glowny);
+  transition: var(--przejscie);
+}
+
+.input-szukaj:focus {
+  outline: none;
+  border-color: var(--kolor-akcent);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.input-szukaj::placeholder {
+  color: var(--tekst-wyciszony);
+}
+
+.btn-wyczysc-szukaj {
+  position: absolute;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: var(--tekst-wyciszony);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--promien-sm);
+  transition: var(--przejscie);
+}
+
+.btn-wyczysc-szukaj:hover {
+  color: var(--tekst-glowny);
+  background-color: #f3f4f6;
+}
+
+.filtry-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+  font-size: 0.875rem;
+  color: var(--tekst-drugorzedny);
+}
+
+.aktywny-filtr-tag {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.55rem;
+  background-color: var(--kolor-glowny-jasny);
+  color: var(--kolor-glowny);
+  border: 1px solid var(--kolor-akcent-subtelny);
+  border-radius: var(--promien-sm);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.btn-reset-filtrow {
+  background-color: #f3f4f6;
+  border: 1px solid var(--obramowanie-ciemniejsze);
+  color: var(--tekst-glowny);
+  padding: 0.35rem 0.75rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  border-radius: var(--promien-sm);
+  cursor: pointer;
+  transition: var(--przejscie);
+}
+
+.btn-reset-filtrow:hover {
+  background-color: #e5e7eb;
+  color: var(--tekst-glowny);
+}
+
+/* ==========================================================================
+   Karty zadań
+   ========================================================================== */
+
+.lista-kart-zadan {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.karta-zadania {
+  background-color: var(--tlo-karty);
+  border: 1px solid var(--obramowanie);
+  border-radius: var(--promien-lg);
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--cien-sm);
+  transition: var(--przejscie);
+  display: flex;
+  flex-direction: column;
+}
+
+.karta-zadania:hover {
+  border-color: var(--obramowanie-ciemniejsze);
+  box-shadow: var(--cien-hover);
+  transform: translateY(-2px);
+}
+
+.karta-naglowek {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.karta-naglowek-lewa {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.zadanie-numer {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--kolor-glowny);
+  background-color: #f3f4f6;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--promien-sm);
+}
+
+.dzial-tag {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--kolor-glowny);
+  background-color: var(--kolor-glowny-jasny);
+  border: 1px solid var(--kolor-akcent-subtelny);
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--promien-sm);
+}
+
+.status-zatwierdzone {
+  background-color: var(--status-sukces-tlo);
+  color: var(--status-sukces-tekst);
+  border: 1px solid var(--status-sukces-obramowanie);
+}
+
+.karta-tresc {
+  margin: 1.1rem 0;
+  font-size: 1.025rem;
+  line-height: 1.65;
+  color: #1f2937;
+}
+
+.karta-tresc p {
+  margin: 0;
+  white-space: pre-line;
+}
+
+.karta-stopka {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #f3f4f6;
+  font-size: 0.825rem;
+  color: var(--tekst-wyciszony);
+}
+
+/* Brak wyników */
+.brak-wynikow {
+  background-color: var(--tlo-karty);
+  border: 2px dashed var(--obramowanie-ciemniejsze);
+  border-radius: var(--promien-lg);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+}
+
+.brak-wynikow-ikona {
+  font-size: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.brak-wynikow h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: var(--tekst-glowny);
+}
+
+.brak-wynikow p {
+  margin: 0 0 1.25rem;
+  color: var(--tekst-wyciszony);
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Widoki pozostałych zakładek (placeholdery)
+   ========================================================================== */
+
+.app-content {
+  background-color: var(--tlo-karty);
+  border: 1px solid var(--obramowanie);
+  border-radius: var(--promien-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--cien-sm);
+}
+
+.app-content p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--tekst-drugorzedny);
+}
+
+/* ==========================================================================
+   Responsywność (Media Queries)
+   ========================================================================== */
+
+@media (max-width: 860px) {
+  .baza-zadan-layout {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .sidebar-dzialy {
+    width: 100%;
+    position: static;
+  }
+
+  .dzialy-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .poddzialy-lista {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .app-container {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .app-header-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .nav-button {
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 0;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .dzialy-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .karta-naglowek {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filtry-status {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-reset-filtrow {
+    width: 100%;
+    text-align: center;
+  }
 }
