@@ -84,6 +84,7 @@ Baza danych SQLite (`matemin.db`) zostanie utworzona automatycznie w katalogu `b
 
 ### 2. Testy jednostkowe
 ```bash
+cd ..
 dotnet test Tests/MateMin.Tests/MateMin.Tests.csproj
 ```
 
