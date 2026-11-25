@@ -1,18 +1,18 @@
-using MatemIn.Backend.Data;
-using MatemIn.Backend.Dtos;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Data;
+using MateMin.Backend.Dtos;
+using MateMin.Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Controllers;
+namespace MateMin.Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ModeracjaController : ControllerBase
 {
-    private readonly MatemInDbContext _db;
+    private readonly MateMinDbContext _db;
 
-    public ModeracjaController(MatemInDbContext db)
+    public ModeracjaController(MateMinDbContext db)
     {
         _db = db;
     }

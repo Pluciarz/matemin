@@ -1,4 +1,4 @@
-namespace MatemIn.Backend.Dtos;
+namespace MateMin.Backend.Dtos;
 
 public record PoddzialDto(int Id, string Nazwa, int? RodzicId);
 

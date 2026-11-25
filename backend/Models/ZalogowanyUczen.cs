@@ -1,4 +1,4 @@
-namespace MatemIn.Backend.Models;
+namespace MateMin.Backend.Models;
 
 public class ZalogowanyUczen : Uzytkownik
 {

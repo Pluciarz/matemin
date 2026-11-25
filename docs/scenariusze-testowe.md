@@ -1,6 +1,6 @@
-# Scenariusze testowe - Projekt MatemIn
+# Scenariusze testowe - Projekt MateMin
 
-Dokument zawiera zestaw scenariuszy testow funkcjonalnych oraz akceptacyjnych weryfikujacych kluczowe przypadki uzycia platformy edukacyjnej **MatemIn**.
+Dokument zawiera zestaw scenariuszy testow funkcjonalnych oraz akceptacyjnych weryfikujacych kluczowe przypadki uzycia platformy edukacyjnej **MateMin**.
 
 | ID | Obszar / Przypadek uzycia | Cel testu | Warunki wstepne | Kroki testowe | Oczekiwany rezultat |
 | :--- | :--- | :--- | :--- | :--- | :--- |

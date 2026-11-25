@@ -20,7 +20,7 @@ reviews:
   path_instructions:
     - path: "backend/**/*.cs"
       instructions: |
-        - Projekt korzysta z ASP.NET Core (.NET 8), Entity Framework Core 8 oraz SQLite w przestrzeni nazw `MatemIn.Backend`.
+        - Projekt korzysta z ASP.NET Core (.NET 8), Entity Framework Core 8 oraz SQLite w przestrzeni nazw `MateMin.Backend`.
         - Sprawdzaj zgodność z modelem domenowym (`Uzytkownik` TPH, `ZalogowanyUczen`, `Moderator`, `Dzial`, `Zadanie`, `Rozwiazanie`, `Komentarz`, `Ocena`, `StatusZadania`).
         - W zapytaniach odczytujących zwracaj uwagę na użycie `async/await`, projekcji (`Select`) lub `AsNoTracking()`.
         - Zwracaj uwagę na brak zahardkodowanych kluczy API, haseł i wrażliwych danych oraz na poprawną obsługę kodów HTTP (`NotFound`, `BadRequest`, `Ok`).

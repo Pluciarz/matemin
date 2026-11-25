@@ -1,17 +1,17 @@
-using MatemIn.Backend.Data;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Data;
+using MateMin.Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Controllers;
+namespace MateMin.Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ZadaniaController : ControllerBase
 {
-    private readonly MatemInDbContext _dbContext;
+    private readonly MateMinDbContext _dbContext;
 
-    public ZadaniaController(MatemInDbContext dbContext)
+    public ZadaniaController(MateMinDbContext dbContext)
     {
         _dbContext = dbContext;
     }

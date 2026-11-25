@@ -109,7 +109,7 @@ function App() {
     <main className="app-container">
       <header className="app-header">
         <div className="app-header-content">
-          <h1>Matemin</h1>
+          <h1>MateMin</h1>
           <p className="app-header-subtitle">
             Baza zadań maturalnych i narzędzia do nauki matematyki
           </p>

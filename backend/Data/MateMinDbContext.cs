@@ -1,11 +1,11 @@
-using MatemIn.Backend.Models;
+using MateMin.Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Data;
+namespace MateMin.Backend.Data;
 
-public class MatemInDbContext : DbContext
+public class MateMinDbContext : DbContext
 {
-    public MatemInDbContext(DbContextOptions<MatemInDbContext> options) : base(options)
+    public MateMinDbContext(DbContextOptions<MateMinDbContext> options) : base(options)
     {
     }
 

@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Models;
 
-namespace MatemIn.Backend.Dtos;
+namespace MateMin.Backend.Dtos;
 
 /// <summary>
 /// Zadanie wyświetlane na liście moderatora.

@@ -1,19 +1,19 @@
 
-using MatemIn.Backend.Data;
-using MatemIn.Backend.Dtos;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Data;
+using MateMin.Backend.Dtos;
+using MateMin.Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Controllers;
+namespace MateMin.Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class DzialyController : ControllerBase
 {
-    private readonly MatemInDbContext _dbContext;
+    private readonly MateMinDbContext _dbContext;
 
-    public DzialyController(MatemInDbContext dbContext)
+    public DzialyController(MateMinDbContext dbContext)
     {
         _dbContext = dbContext;
     }
