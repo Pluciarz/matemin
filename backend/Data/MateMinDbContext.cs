@@ -1,11 +1,11 @@
-using MatemIn.Backend.Models;
+using MateMin.Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Data;
+namespace MateMin.Backend.Data;
 
-public class MatemInDbContext : DbContext
+public class MateMinDbContext : DbContext
 {
-    public MatemInDbContext(DbContextOptions<MatemInDbContext> options) : base(options)
+    public MateMinDbContext(DbContextOptions<MateMinDbContext> options) : base(options)
     {
     }
 
@@ -28,7 +28,7 @@ public class MatemInDbContext : DbContext
             .HasValue<ZalogowanyUczen>("Uczen")
             .HasValue<Moderator>("Moderator");
 
-        // Hierarchia działów (Dzial -> Poddzialy)
+        // Hierarchia dziaĹ‚Ăłw (Dzial -> Poddzialy)
         modelBuilder.Entity<Dzial>()
             .HasOne(d => d.Rodzic)
             .WithMany(d => d.Poddzialy)
@@ -91,7 +91,7 @@ public class MatemInDbContext : DbContext
             .HasForeignKey(o => o.AutorId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        // Reguła biznesowa: jeden użytkownik może wystawić tylko jedną ocenę dla danego rozwiązania
+        // ReguĹ‚a biznesowa: jeden uĹĽytkownik moĹĽe wystawiÄ‡ tylko jednÄ… ocenÄ™ dla danego rozwiÄ…zania
         modelBuilder.Entity<Ocena>()
             .HasIndex(o => new { o.RozwiazanieId, o.AutorId })
             .IsUnique();

@@ -1,24 +1,24 @@
-using MatemIn.Backend.Data;
-using MatemIn.Backend.Dtos;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Data;
+using MateMin.Backend.Dtos;
+using MateMin.Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Controllers;
+namespace MateMin.Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class ModeracjaController : ControllerBase
 {
-    private readonly MatemInDbContext _db;
+    private readonly MateMinDbContext _db;
 
-    public ModeracjaController(MatemInDbContext db)
+    public ModeracjaController(MateMinDbContext db)
     {
         _db = db;
     }
 
     /// <summary>
-    /// Kolejka moderacji: zadania oczekujące na decyzję, od najstarszych.
+    /// Kolejka moderacji: zadania oczekujÄ…ce na decyzjÄ™, od najstarszych.
     /// </summary>
     [HttpGet("zadania/oczekujace")]
     public async Task<ActionResult<List<ZadanieDoModeracjiDto>>> PobierzOczekujace()
@@ -38,7 +38,7 @@ public class ModeracjaController : ControllerBase
                 Tresc = z.Tresc,
                 DataDodania = z.DataDodania,
                 AutorNazwa = z.Autor.NazwaUzytkownika,
-                DzialNazwa = z.Dzial?.Nazwa ?? "Brak działu",
+                DzialNazwa = z.Dzial?.Nazwa ?? "Brak dziaĹ‚u",
                 Status = z.Status
             })
             .ToList();

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MatemIn.Backend.Migrations
+namespace MateMin.Backend.Migrations
 {
     /// <inheritdoc />
     public partial class Init : Migration

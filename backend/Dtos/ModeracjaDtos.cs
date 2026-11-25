@@ -1,10 +1,10 @@
 using System.ComponentModel.DataAnnotations;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Models;
 
-namespace MatemIn.Backend.Dtos;
+namespace MateMin.Backend.Dtos;
 
 /// <summary>
-/// Zadanie wyświetlane na liście moderatora.
+/// Zadanie wyĹ›wietlane na liĹ›cie moderatora.
 /// </summary>
 public record ZadanieDoModeracjiDto
 {
@@ -17,7 +17,7 @@ public record ZadanieDoModeracjiDto
 }
 
 /// <summary>
-/// Żądanie zmiany statusu zadania przez moderatora.
+/// Ĺ»Ä…danie zmiany statusu zadania przez moderatora.
 /// </summary>
 public record ZmianaStatusuZadaniaDto
 {
@@ -28,7 +28,7 @@ public record ZmianaStatusuZadaniaDto
 }
 
 /// <summary>
-/// Użytkownik wyświetlany na liście moderatora.
+/// UĹĽytkownik wyĹ›wietlany na liĹ›cie moderatora.
 /// </summary>
 public record UzytkownikModeracjaDto
 {
@@ -40,7 +40,7 @@ public record UzytkownikModeracjaDto
 }
 
 /// <summary>
-/// Żądanie zablokowania lub odblokowania użytkownika.
+/// Ĺ»Ä…danie zablokowania lub odblokowania uĹĽytkownika.
 /// </summary>
 public record ZmianaBlokadyUzytkownikaDto
 {

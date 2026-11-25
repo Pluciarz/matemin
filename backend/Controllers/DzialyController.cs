@@ -1,19 +1,19 @@
 
-using MatemIn.Backend.Data;
-using MatemIn.Backend.Dtos;
-using MatemIn.Backend.Models;
+using MateMin.Backend.Data;
+using MateMin.Backend.Dtos;
+using MateMin.Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace MatemIn.Backend.Controllers;
+namespace MateMin.Backend.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class DzialyController : ControllerBase
 {
-    private readonly MatemInDbContext _dbContext;
+    private readonly MateMinDbContext _dbContext;
 
-    public DzialyController(MatemInDbContext dbContext)
+    public DzialyController(MateMinDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -27,9 +27,9 @@ public class DzialyController : ControllerBase
             funkcje.DodajPoddzial(new Dzial { Nazwa = "Funkcja liniowa" });
             funkcje.DodajPoddzial(new Dzial { Nazwa = "Funkcja kwadratowa" });
 
-            var ciagi = new Dzial { Nazwa = "Ciągi" };
-            ciagi.DodajPoddzial(new Dzial { Nazwa = "Ciąg arytmetyczny" });
-            ciagi.DodajPoddzial(new Dzial { Nazwa = "Ciąg geometryczny" });
+            var ciagi = new Dzial { Nazwa = "CiÄ…gi" };
+            ciagi.DodajPoddzial(new Dzial { Nazwa = "CiÄ…g arytmetyczny" });
+            ciagi.DodajPoddzial(new Dzial { Nazwa = "CiÄ…g geometryczny" });
 
             var trygonometria = new Dzial { Nazwa = "Trygonometria" };
             trygonometria.DodajPoddzial(new Dzial { Nazwa = "Funkcje trygonometryczne" });

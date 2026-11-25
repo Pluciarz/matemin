@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MatemIn.Backend.Models;
+namespace MateMin.Backend.Models;
 
 public class Ocena
 {

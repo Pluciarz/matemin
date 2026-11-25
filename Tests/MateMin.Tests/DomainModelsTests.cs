@@ -1,7 +1,7 @@
-using MatemIn.Backend.Models;
+using MateMin.Backend.Models;
 using Xunit;
 
-namespace MatemIn.Tests;
+namespace MateMin.Tests;
 
 public class DomainModelsTests
 {
@@ -11,7 +11,7 @@ public class DomainModelsTests
         var rozwiazanie = new Rozwiazanie
         {
             Id = 1,
-            Tresc = "Rozwi¹zanie równania liniowego: x = 5"
+            Tresc = "RozwiÄ…zanie rÃ³wnania liniowego: x = 5"
         };
 
         var srednia = rozwiazanie.ObliczSredniaOcene();
@@ -25,7 +25,7 @@ public class DomainModelsTests
         var rozwiazanie = new Rozwiazanie
         {
             Id = 1,
-            Tresc = "Dowód twierdzenia Pitagorasa",
+            Tresc = "DowÃ³d twierdzenia Pitagorasa",
             Oceny = new List<Ocena>
             {
                 new() { Id = 1, Wartosc = 4 },
@@ -46,7 +46,7 @@ public class DomainModelsTests
         var zadanie = new Zadanie
         {
             Id = 10,
-            Tresc = "Oblicz ca³kê oznaczon¹ z funkcji f(x) = x^2 w przedziale [0, 1]."
+            Tresc = "Oblicz caÅ‚kÄ™ oznaczonÄ… z funkcji f(x) = x^2 w przedziale [0, 1]."
         };
 
         moderator.ZatwierdzZadanie(zadanie);
@@ -61,7 +61,7 @@ public class DomainModelsTests
         var zadanie = new Zadanie
         {
             Id = 11,
-            Tresc = "Niekompletna treœæ zadania"
+            Tresc = "Niekompletna treÅ›Ä‡ zadania"
         };
 
         moderator.OdrzucZadanie(zadanie);

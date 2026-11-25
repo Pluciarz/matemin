@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/backend/">
+    <Project Path="backend/MateMin.Backend.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="Tests/MateMin.Tests/MateMin.Tests.csproj" />
+  </Folder>
+</Solution>

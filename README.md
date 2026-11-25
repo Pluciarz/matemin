@@ -1,4 +1,4 @@
-# Matemin
+# MateMin
 
 [![CI Pipeline](https://github.com/Pluciarz/matemin/actions/workflows/ci.yml/badge.svg)](https://github.com/Pluciarz/matemin/actions/workflows/ci.yml)
 
@@ -32,6 +32,7 @@ Projekt obejmuje:
 Szczegółowe informacje znajdują się w folderze `docs/`:
 - 📅 [Harmonogram prac](docs/harmonogram.md)
 - 📋 [Wymagania funkcjonalne i niefunkcjonalne](docs/wymagania.md)
+- ✅ [Scenariusze testowe](docs/scenariusze-testowe.md)
 - 🗂️ [Diagramy (use case, klasy, sekwencji)](docs/diagrams/)
 
 ## Struktura repozytorium
@@ -54,9 +55,13 @@ matemin/
 │   │   ├── sequence-diagram.drawio
 │   │   └── sequence-diagram.png
 │   ├── harmonogram.md
+│   ├── scenariusze-testowe.md
 │   └── wymagania.md
 ├── backend/          # ASP.NET Core Web API (.NET 8 + EF Core + SQLite)
 ├── frontend/         # React + TypeScript (Vite)
+├── Tests/            # Testy jednostkowe (.NET 8)
+├── MateMin.slnx
+├── .coderabbit.yaml
 ├── .gitignore
 └── README.md
 ```
@@ -64,21 +69,25 @@ matemin/
 ## Uruchomienie projektu
 
 **Wymagania:**
-- .NET 8 SDK (backend)
+- .NET 8 SDK (backend i testy)
 - Node.js 18+ oraz npm (frontend)
 
 ### 1. Backend (ASP.NET Core Web API)
 ```bash
 cd backend
 dotnet restore
-dotnet ef migrations add Init
 dotnet ef database update
 dotnet run
 ```
 Po uruchomieniu API oraz dokumentacja Swagger UI będą dostępne pod adresem: `http://localhost:5000/swagger`.
 Baza danych SQLite (`matemin.db`) zostanie utworzona automatycznie w katalogu `backend/`.
 
-### 2. Frontend (React + Vite)
+### 2. Testy jednostkowe
+```bash
+dotnet test Tests/MateMin.Tests/MateMin.Tests.csproj
+```
+
+### 3. Frontend (React + Vite)
 ```bash
 cd frontend
 npm install
@@ -88,11 +97,11 @@ Aplikacja frontendowa będzie dostępna pod adresem: `http://localhost:5173`.
 
 ## Pipeline
 Repozytorium wykorzystuje **GitHub Actions** (`.github/workflows/ci.yml`) do automatycznej weryfikacji kodu przy każdym pushu na gałąź `main` oraz w każdym Pull Requeście:
-1. **Backend (.NET 8):** Pobranie zależności (`dotnet restore`) oraz kompilacja projektu API (`dotnet build --configuration Release`).
+1. **Backend & Testy (.NET 8):** Pobranie zależności (`dotnet restore`), kompilacja projektu API (`dotnet build --configuration Release`) oraz uruchomienie testów jednostkowych (`dotnet test`).
 2. **Frontend (React + TypeScript):** Czysta instalacja pakietów (`npm ci`), kontrola typów kompilatora TypeScript (`tsc -b`) oraz budowanie paczki produkcyjnej Vite (`npm run build`).
 
 ## Komunikacja
 - **Messenger:** Bieżąca komunikacja zespołu
 - **GitHub Issues:** Zarządzanie zadaniami
 - **GitHub Projects:** Tablica Kanban do śledzenia postępów w sprintach
-- **Pull Requests:** Wprowadzanie zmian z obowiązkowym code review
+- **Pull Requests:** Wprowadzanie zmian z obowiązkowym code review (wspieranym przez CodeRabbit)

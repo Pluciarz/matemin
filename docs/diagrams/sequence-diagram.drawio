@@ -1,7 +1,7 @@
 <mxfile host="app.diagrams.net"><diagram name="Diagram sekwencji - matemin"><mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="950" math="0" shadow="0"><root>
 <mxCell id="0" />
 <mxCell id="1" parent="0" />
-<mxCell id="L1" value="Uczeń" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+<mxCell id="L1" value="UczeĹ„" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
   <mxGeometry x="20" y="20" width="30" height="60" as="geometry" />
 </mxCell>
 <mxCell id="L1_line" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#000000;" edge="1" parent="1">
@@ -10,7 +10,7 @@
     <mxPoint x="35" y="920" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="L2" value="System MatemIn" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
+<mxCell id="L2" value="System MateMin" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
   <mxGeometry x="260" y="40" width="180" height="40" as="geometry" />
 </mxCell>
 <mxCell id="L2_line" style="html=1;dashed=1;endArrow=none;startArrow=none;strokeColor=#000000;" edge="1" parent="1">
@@ -19,7 +19,7 @@
     <mxPoint x="350.0" y="920" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="L3" value="«System»
+<mxCell id="L3" value="Â«SystemÂ»
 Model LLM (API)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
   <mxGeometry x="560" y="40" width="180" height="40" as="geometry" />
 </mxCell>
@@ -38,7 +38,7 @@ Model LLM (API)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strok
     <mxPoint x="940.0" y="920" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="L5" value="«System»
+<mxCell id="L5" value="Â«SystemÂ»
 Wolfram Alpha (API)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" vertex="1" parent="1">
   <mxGeometry x="1120" y="40" width="200" height="40" as="geometry" />
 </mxCell>
@@ -63,7 +63,7 @@ Wolfram Alpha (API)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;s
 <mxCell id="act_wolf" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
   <mxGeometry x="1215.0" y="740" width="10" height="60" as="geometry"/>
 </mxCell>
-<mxCell id="m1" value="wrzućZadanie(treść)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
+<mxCell id="m1" value="wrzuÄ‡Zadanie(treĹ›Ä‡)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="35" y="120" as="sourcePoint"/>
     <mxPoint x="350.0" y="120" as="targetPoint"/>
@@ -81,64 +81,64 @@ Wolfram Alpha (API)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;s
     <mxPoint x="350.0" y="240" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m4" value="kategoryzujZadanie(treść)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
+<mxCell id="m4" value="kategoryzujZadanie(treĹ›Ä‡)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="350.0" y="300" as="sourcePoint"/>
     <mxPoint x="650.0" y="300" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m5" value="sugerowanyDział" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
+<mxCell id="m5" value="sugerowanyDziaĹ‚" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="650.0" y="360" as="sourcePoint"/>
     <mxPoint x="350.0" y="360" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m6" value="przypiszDział(idZadania, dział)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
+<mxCell id="m6" value="przypiszDziaĹ‚(idZadania, dziaĹ‚)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="350.0" y="420" as="sourcePoint"/>
     <mxPoint x="940.0" y="420" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m7" value="znajdźPodobneRozwiazania(dział, treść)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
+<mxCell id="m7" value="znajdĹşPodobneRozwiazania(dziaĹ‚, treĹ›Ä‡)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="350.0" y="480" as="sourcePoint"/>
     <mxPoint x="940.0" y="480" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m8" value="listaRozwiazań" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
+<mxCell id="m8" value="listaRozwiazaĹ„" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="940.0" y="540" as="sourcePoint"/>
     <mxPoint x="350.0" y="540" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m9" value="wynikKategoryzacji + listaPodobnychRozwiazań" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
+<mxCell id="m9" value="wynikKategoryzacji + listaPodobnychRozwiazaĹ„" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="350.0" y="600" as="sourcePoint"/>
     <mxPoint x="35" y="600" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="frag1" value="opt   [uczeń chce wykonać obliczenia]" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fillColor=none;strokeColor=#000000;spacingLeft=6;spacingTop=4;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+<mxCell id="frag1" value="opt   [uczeĹ„ chce wykonaÄ‡ obliczenia]" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=left;fillColor=none;strokeColor=#000000;spacingLeft=6;spacingTop=4;fontStyle=1;fontSize=11;" vertex="1" parent="1">
   <mxGeometry x="40" y="630" width="1240" height="270" as="geometry" />
 </mxCell>
-<mxCell id="m10" value="wykonajObliczenia(wyrażenie)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
+<mxCell id="m10" value="wykonajObliczenia(wyraĹĽenie)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="35" y="690" as="sourcePoint"/>
     <mxPoint x="350.0" y="690" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m11" value="obliczWyrażenie(wyrażenie)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
+<mxCell id="m11" value="obliczWyraĹĽenie(wyraĹĽenie)" style="html=1;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="350.0" y="750" as="sourcePoint"/>
     <mxPoint x="1220.0" y="750" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m12" value="wynikObliczeń" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
+<mxCell id="m12" value="wynikObliczeĹ„" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="1220.0" y="800" as="sourcePoint"/>
     <mxPoint x="350.0" y="800" as="targetPoint"/>
   </mxGeometry>
 </mxCell>
-<mxCell id="m13" value="wynikObliczeń" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
+<mxCell id="m13" value="wynikObliczeĹ„" style="html=1;endArrow=block;endFill=1;fontSize=11;dashed=1;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="350.0" y="860" as="sourcePoint"/>
     <mxPoint x="35" y="860" as="targetPoint"/>
