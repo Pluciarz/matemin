@@ -27,9 +27,9 @@ public class DzialyController : ControllerBase
             funkcje.DodajPoddzial(new Dzial { Nazwa = "Funkcja liniowa" });
             funkcje.DodajPoddzial(new Dzial { Nazwa = "Funkcja kwadratowa" });
 
-            var ciagi = new Dzial { Nazwa = "CiÄ…gi" };
-            ciagi.DodajPoddzial(new Dzial { Nazwa = "CiÄ…g arytmetyczny" });
-            ciagi.DodajPoddzial(new Dzial { Nazwa = "CiÄ…g geometryczny" });
+            var ciagi = new Dzial { Nazwa = "Ciągi" };
+            ciagi.DodajPoddzial(new Dzial { Nazwa = "Ciąg arytmetyczny" });
+            ciagi.DodajPoddzial(new Dzial { Nazwa = "Ciąg geometryczny" });
 
             var trygonometria = new Dzial { Nazwa = "Trygonometria" };
             trygonometria.DodajPoddzial(new Dzial { Nazwa = "Funkcje trygonometryczne" });

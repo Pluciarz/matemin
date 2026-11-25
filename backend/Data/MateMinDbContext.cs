@@ -28,7 +28,7 @@ public class MateMinDbContext : DbContext
             .HasValue<ZalogowanyUczen>("Uczen")
             .HasValue<Moderator>("Moderator");
 
-        // Hierarchia dziaĹ‚Ăłw (Dzial -> Poddzialy)
+        // Hierarchia działów (Dzial -> Poddzialy)
         modelBuilder.Entity<Dzial>()
             .HasOne(d => d.Rodzic)
             .WithMany(d => d.Poddzialy)
@@ -91,7 +91,7 @@ public class MateMinDbContext : DbContext
             .HasForeignKey(o => o.AutorId)
             .OnDelete(DeleteBehavior.Restrict);
 
-        // ReguĹ‚a biznesowa: jeden uĹĽytkownik moĹĽe wystawiÄ‡ tylko jednÄ… ocenÄ™ dla danego rozwiÄ…zania
+        // Reguła biznesowa: jeden użytkownik może wystawić tylko jedną ocenę dla danego rozwiązania
         modelBuilder.Entity<Ocena>()
             .HasIndex(o => new { o.RozwiazanieId, o.AutorId })
             .IsUnique();

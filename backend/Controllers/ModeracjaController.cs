@@ -18,7 +18,7 @@ public class ModeracjaController : ControllerBase
     }
 
     /// <summary>
-    /// Kolejka moderacji: zadania oczekujÄ…ce na decyzjÄ™, od najstarszych.
+    /// Kolejka moderacji: zadania oczekujące na decyzję, od najstarszych.
     /// </summary>
     [HttpGet("zadania/oczekujace")]
     public async Task<ActionResult<List<ZadanieDoModeracjiDto>>> PobierzOczekujace()
@@ -38,7 +38,7 @@ public class ModeracjaController : ControllerBase
                 Tresc = z.Tresc,
                 DataDodania = z.DataDodania,
                 AutorNazwa = z.Autor.NazwaUzytkownika,
-                DzialNazwa = z.Dzial?.Nazwa ?? "Brak dziaĹ‚u",
+                DzialNazwa = z.Dzial?.Nazwa ?? "Brak działu",
                 Status = z.Status
             })
             .ToList();

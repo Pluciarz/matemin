@@ -7,67 +7,67 @@
         <mxCell id="bnd1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fillColor=none;strokeColor=#000000;" value="System MateMin" vertex="1">
           <mxGeometry height="700" width="1180" x="140" y="20" as="geometry" />
         </mxCell>
-        <mxCell id="A1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="UczeĹ„ (GoĹ›Ä‡)" vertex="1">
+        <mxCell id="A1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Uczeń (Gość)" vertex="1">
           <mxGeometry height="60" width="30" x="20" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="A2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Zalogowany UczeĹ„" vertex="1">
+        <mxCell id="A2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Zalogowany Uczeń" vertex="1">
           <mxGeometry height="60" width="30" x="20" y="320" as="geometry" />
         </mxCell>
         <mxCell id="A3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Autor / Moderator" vertex="1">
           <mxGeometry height="60" width="30" x="20" y="470" as="geometry" />
         </mxCell>
-        <mxCell id="A4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Â«SystemÂ»&#xa;Model LLM (API)" vertex="1">
+        <mxCell id="A4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="«System»&#xa;Model LLM (API)" vertex="1">
           <mxGeometry height="60" width="30" x="20" y="620" as="geometry" />
         </mxCell>
-        <mxCell id="A5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Â«SystemÂ»&#xa;Wolfram Alpha (API)" vertex="1">
+        <mxCell id="A5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="«System»&#xa;Wolfram Alpha (API)" vertex="1">
           <mxGeometry height="60" width="30" x="1360" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="U1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="PrzeglÄ…danie bazy zadaĹ„ i dziaĹ‚Ăłw" vertex="1">
+        <mxCell id="U1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Przeglądanie bazy zadań i działów" vertex="1">
           <mxGeometry height="50" width="240" x="270" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="U2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wyszukiwanie zadaĹ„ po kryteriach" vertex="1">
+        <mxCell id="U2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wyszukiwanie zadań po kryteriach" vertex="1">
           <mxGeometry height="50" width="220" x="1050" y="50" as="geometry" />
         </mxCell>
-        <mxCell id="U3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wrzucenie wĹ‚asnego zadania (Upload)" vertex="1">
+        <mxCell id="U3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wrzucenie własnego zadania (Upload)" vertex="1">
           <mxGeometry height="50" width="240" x="660" y="110" as="geometry" />
         </mxCell>
         <mxCell id="U4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Rejestracja i logowanie" vertex="1">
           <mxGeometry height="50" width="220" x="200" y="190" as="geometry" />
         </mxCell>
-        <mxCell id="U5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wykonywanie obliczeĹ„ (Kalkulator)" vertex="1">
+        <mxCell id="U5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wykonywanie obliczeń (Kalkulator)" vertex="1">
           <mxGeometry height="50" width="240" x="780" y="190" as="geometry" />
         </mxCell>
         <mxCell id="U6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Podanie daty urodzenia" vertex="1">
           <mxGeometry height="50" width="220" x="490" y="200" as="geometry" />
         </mxCell>
-        <mxCell id="U7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Dodawanie komentarza do rozwiÄ…zania" vertex="1">
+        <mxCell id="U7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Dodawanie komentarza do rozwiązania" vertex="1">
           <mxGeometry height="50" width="240" x="200" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="U8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Ocenianie rozwiÄ…zania" vertex="1">
+        <mxCell id="U8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Ocenianie rozwiązania" vertex="1">
           <mxGeometry height="50" width="200" x="740" y="310" as="geometry" />
         </mxCell>
-        <mxCell id="U9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Edycja / usuniÄ™cie wĹ‚asnego zgĹ‚oszonego zadania" vertex="1">
+        <mxCell id="U9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Edycja / usunięcie własnego zgłoszonego zadania" vertex="1">
           <mxGeometry height="50" width="280" x="820" y="250" as="geometry" />
         </mxCell>
-        <mxCell id="U10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="PrzeglÄ…danie wĹ‚asnego profilu i historii" vertex="1">
+        <mxCell id="U10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Przeglądanie własnego profilu i historii" vertex="1">
           <mxGeometry height="50" width="240" x="910" y="360" as="geometry" />
         </mxCell>
         <mxCell id="U16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Wylogowanie" vertex="1">
           <mxGeometry height="50" width="180" x="370" y="380" as="geometry" />
         </mxCell>
-        <mxCell id="U11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Dodawanie nowych zadaĹ„ i rozwiÄ…zaĹ„ do bazy" vertex="1">
+        <mxCell id="U11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Dodawanie nowych zadań i rozwiązań do bazy" vertex="1">
           <mxGeometry height="50" width="280" x="730" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="U12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="ZarzÄ…dzanie bazÄ… pytaĹ„ i dziaĹ‚Ăłw" vertex="1">
+        <mxCell id="U12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Zarządzanie bazą pytań i działów" vertex="1">
           <mxGeometry height="50" width="240" x="1060" y="450" as="geometry" />
         </mxCell>
-        <mxCell id="U13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="ZarzÄ…dzanie kontami uĹĽytkownikĂłw" vertex="1">
+        <mxCell id="U13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Zarządzanie kontami użytkowników" vertex="1">
           <mxGeometry height="50" width="260" x="950" y="510" as="geometry" />
         </mxCell>
         <mxCell id="U14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Automatyczna kategoryzacja zadania" vertex="1">
           <mxGeometry height="50" width="260" x="490" y="560" as="geometry" />
         </mxCell>
-        <mxCell id="U15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Dopasowanie rozwiÄ…zaĹ„ z bazy" vertex="1">
+        <mxCell id="U15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" value="Dopasowanie rozwiązań z bazy" vertex="1">
           <mxGeometry height="50" width="240" x="920" y="625" as="geometry" />
         </mxCell>
         <mxCell id="e1" edge="1" parent="1" source="A1" style="endArrow=none;html=1;rounded=0;" target="U1">

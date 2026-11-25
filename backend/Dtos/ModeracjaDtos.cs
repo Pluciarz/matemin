@@ -4,7 +4,7 @@ using MateMin.Backend.Models;
 namespace MateMin.Backend.Dtos;
 
 /// <summary>
-/// Zadanie wyĹ›wietlane na liĹ›cie moderatora.
+/// Zadanie wyświetlane na liście moderatora.
 /// </summary>
 public record ZadanieDoModeracjiDto
 {
@@ -17,7 +17,7 @@ public record ZadanieDoModeracjiDto
 }
 
 /// <summary>
-/// Ĺ»Ä…danie zmiany statusu zadania przez moderatora.
+/// Żądanie zmiany statusu zadania przez moderatora.
 /// </summary>
 public record ZmianaStatusuZadaniaDto
 {
@@ -28,7 +28,7 @@ public record ZmianaStatusuZadaniaDto
 }
 
 /// <summary>
-/// UĹĽytkownik wyĹ›wietlany na liĹ›cie moderatora.
+/// Użytkownik wyświetlany na liście moderatora.
 /// </summary>
 public record UzytkownikModeracjaDto
 {
@@ -40,7 +40,7 @@ public record UzytkownikModeracjaDto
 }
 
 /// <summary>
-/// Ĺ»Ä…danie zablokowania lub odblokowania uĹĽytkownika.
+/// Żądanie zablokowania lub odblokowania użytkownika.
 /// </summary>
 public record ZmianaBlokadyUzytkownikaDto
 {

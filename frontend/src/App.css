@@ -27,7 +27,7 @@
   --przejscie: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Kontener gĹ‚Ăłwny aplikacji */
+/* Kontener główny aplikacji */
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -38,7 +38,7 @@
 }
 
 /* ==========================================================================
-   NagĹ‚Ăłwek aplikacji
+   Nagłówek aplikacji
    ========================================================================== */
 
 .app-header {
@@ -113,7 +113,7 @@
 }
 
 /* ==========================================================================
-   UkĹ‚ad dwukolumnowy Bazy ZadaĹ„ (Sidebar + TreĹ›Ä‡ gĹ‚Ăłwna)
+   Układ dwukolumnowy Bazy Zadań (Sidebar + Treść główna)
    ========================================================================== */
 
 .baza-zadan-layout {
@@ -122,7 +122,7 @@
   align-items: flex-start;
 }
 
-/* Sidebar z listÄ… dziaĹ‚Ăłw */
+/* Sidebar z listą działów */
 .sidebar-dzialy {
   width: 290px;
   flex-shrink: 0;
@@ -214,7 +214,7 @@
   color: #ffffff;
 }
 
-/* PoddziaĹ‚y */
+/* Poddziały */
 .poddzialy-lista {
   list-style: none;
   margin: 0.25rem 0 0.5rem 0.85rem;
@@ -276,7 +276,7 @@
 }
 
 /* ==========================================================================
-   Prawa kolumna: wyszukiwarka + lista zadaĹ„
+   Prawa kolumna: wyszukiwarka + lista zadań
    ========================================================================== */
 
 .glowna-zawartosc {
@@ -390,7 +390,7 @@
 }
 
 /* ==========================================================================
-   Karty zadaĹ„
+   Karty zadań
    ========================================================================== */
 
 .lista-kart-zadan {
@@ -489,7 +489,7 @@
   color: var(--tekst-wyciszony);
 }
 
-/* Brak wynikĂłw */
+/* Brak wyników */
 .brak-wynikow {
   background-color: var(--tlo-karty);
   border: 2px dashed var(--obramowanie-ciemniejsze);
@@ -516,7 +516,7 @@
 }
 
 /* ==========================================================================
-   Widoki pozostaĹ‚ych zakĹ‚adek (placeholdery)
+   Widoki pozostałych zakładek (placeholdery)
    ========================================================================== */
 
 .app-content {
@@ -535,7 +535,7 @@
 }
 
 /* ==========================================================================
-   ResponsywnoĹ›Ä‡ (Media Queries)
+   Responsywność (Media Queries)
    ========================================================================== */
 
 @media (max-width: 860px) {
